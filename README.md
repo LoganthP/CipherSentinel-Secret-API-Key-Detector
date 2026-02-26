@@ -141,41 +141,31 @@ flowchart TD
 
 # ⚙️ Running the Fully Functional Project
 
-⚠️ Important: Run **Backend and Frontend separately**.
+## 📦 1️⃣ Install All Dependencies (Client + Server)
 
-## 1️⃣ Install Dependencies (Root)
+From the root directory, run:
 
-``` bash
-npm install
+```bash
+npm run install:all
 ```
 
 ------------------------------------------------------------------------
 
-## 2️⃣ Start Backend Server
+## 🚀 2️⃣ Start the Full Development Environment
 
 ``` bash
-cd server
 npm run dev
 ```
+→ concurrently "npm run dev:server" "npm run dev:client"
+→ Server: nodemon + ts-node (index.ts)
+→ Client: Vite Dev Server
 
-Backend runs on:
-
-    http://localhost:5000
-
-------------------------------------------------------------------------
-
-## 3️⃣ Start Frontend Client
-
-Open a new terminal:
-
-``` bash
-cd client
-npm run dev
-```
-
-Frontend runs on:
+Frontend Dashboard:
 
     http://localhost:5173
+Backend API:
+
+    http://localhost:5000
 
 ------------------------------------------------------------------------
 
