@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #a60df2;
+  --color-secondary: #00d4ff;
+  --color-accent-blue: #00f2ff;
+  --color-threat: #ff3131;
+
+  --color-background-light: #f7f5f8;
+  --color-background-dark: #0a0612;
+  --color-background-card: #1c1022;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --animate-pulse-fast: pulse-ring 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-scan: scan 3s linear infinite;
+
+  @keyframes pulse-ring {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes scan {
+    0% {
+      top: -100px;
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      top: 100%;
+      opacity: 0;
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased m-0 p-0;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(26, 14, 38, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(166, 13, 242, 0.2);
+  }
+
+  .neon-glow-purple {
+    box-shadow: 0 0 20px rgba(166, 13, 242, 0.4);
+  }
+
+  .neon-glow-blue {
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+  }
+
+  .grid-pattern {
+    background-image: linear-gradient(to right, rgba(166, 13, 242, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(166, 13, 242, 0.05) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .scan-line {
+    background: linear-gradient(to bottom, transparent, #00f2ff, transparent);
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    top: -100px;
+  }
+}
