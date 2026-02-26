@@ -156,9 +156,6 @@ npm run install:all
 ``` bash
 npm run dev
 ```
-→ concurrently "npm run dev:server" "npm run dev:client"
-→ Server: nodemon + ts-node (index.ts)
-→ Client: Vite Dev Server
 
 Frontend Dashboard:
 
